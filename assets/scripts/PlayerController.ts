@@ -36,18 +36,18 @@ export class PlayerController extends Component {
     }
     protected onLoad(): void {
         this.body = this.node.getComponent(RigidBody2D);
-        this.playerAnimation();
+        // this.playerAnimation();
     }
     //动画播放
-    playerAnimation() {
-        const animationComponent = this.node.getComponent(Animation);
-        // 获取动画组件上的动画剪辑
-        const [idleClip, runClip] = animationComponent.clips;
+    // playerAnimation() {
+    //     const animationComponent = this.node.getComponent(Animation);
+    //     // 获取动画组件上的动画剪辑
+    //     const [idleClip, runClip] = animationComponent.clips;
 
-        // 获取 idleClip 的动画状态
-        const idleState = animationComponent.getState(idleClip.name);
-        idleState.play();
-    }
+    //     // 获取 idleClip 的动画状态
+    //     const idleState = animationComponent.getState(idleClip.name);
+    //     idleState.play();
+    // }
     onCollisionEnter(
         selfCollider: Collider2D,
         otherCollider: Collider2D,
